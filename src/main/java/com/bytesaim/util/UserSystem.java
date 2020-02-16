@@ -13,19 +13,19 @@ public class UserSystem {
     public static String OS = properties.getProperty("os.name");
     public static String CPU_ARCH = properties.getProperty("sun.arch.data.model");
 
-    public static boolean isWindows() {
+    public static boolean IsWindows() {
         return OS.startsWith("Windows");
     }
 
-    public static boolean isMac() {
+    public static boolean IsMac() {
         return OS.startsWith("Mac");
     }
 
-    public static boolean isLinux() {
+    public static boolean IsLinux() {
         return OS.startsWith("Linux");
     }
 
-    public static String getWindowsAutoStartFolder() {
+    public static String GetWindowsAutoStartFolder() {
         return System.getProperty("java.io.tmpdir").replace("Local\\Temp\\", "Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup");
     }
 }
