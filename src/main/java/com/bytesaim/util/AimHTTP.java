@@ -37,7 +37,7 @@ public class AimHTTP {
         return true;
     }
 
-    public static String getRawBody(String urlToRead) throws Exception {
+    public static String GetRawBody(String urlToRead) throws Exception {
         HttpURLConnection conn = GetConnection(urlToRead);
         StringBuilder result = new StringBuilder();
         conn.setRequestMethod("GET");
@@ -51,7 +51,7 @@ public class AimHTTP {
         return result.toString();
     }
 
-    public static String getRawBody(String urlToRead, String method, String body) throws Exception {
+    public static String GetRawBody(String urlToRead, String method, String body) throws Exception {
         HttpURLConnection conn = GetConnection(urlToRead);
         StringBuilder result = new StringBuilder();
         conn.setRequestMethod(method);
@@ -71,7 +71,7 @@ public class AimHTTP {
         return result.toString();
     }
 
-    public static String sendHTTPReques(String urlToRead, String method, String params) throws Exception {
+    public static String SendHTTPReques(String urlToRead, String method, String params) throws Exception {
         HttpURLConnection conn = GetConnection(urlToRead);
         StringBuilder result = new StringBuilder();
         conn.setRequestMethod(method);
