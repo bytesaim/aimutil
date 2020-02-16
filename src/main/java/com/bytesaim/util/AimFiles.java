@@ -34,14 +34,14 @@ public class AimFiles {
         return new BufferedReader(new InputStreamReader(is)).lines().collect(Collectors.joining("\n"));
     }
 
-    public static void deleteFolder(String folderPath) throws IOException {
+    public static void DeleteFolder(String folderPath) throws IOException {
         Files.walk(Paths.get(folderPath))
                 .map(Path::toFile)
                 .sorted((o1, o2) -> -o1.compareTo(o2))
                 .forEach(File::delete);
     }
 
-    public static byte[] inputStreamAsBytes(InputStream is) throws IOException {
+    public static byte[] InputStreamAsBytes(InputStream is) throws IOException {
         ByteArrayOutputStream buffer = new ByteArrayOutputStream();
         int nRead;
         byte[] data = new byte[16384];
@@ -51,7 +51,7 @@ public class AimFiles {
         return buffer.toByteArray();
     }
 
-    public static String inputStreamAsString(InputStream is) throws IOException {
+    public static String InputStreamAsString(InputStream is) throws IOException {
         ByteArrayOutputStream result = new ByteArrayOutputStream();
         byte[] buffer = new byte[1024];
         int length;

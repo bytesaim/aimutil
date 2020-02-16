@@ -13,7 +13,7 @@ import java.util.zip.ZipOutputStream;
  */
 public class AimZip {
 
-    public static void compress(String dirPath, String zipFileName) throws IOException {
+    public static void Compress(String dirPath, String zipFileName) throws IOException {
         final Path sourceDir = Paths.get(dirPath);
         try {
             final ZipOutputStream outputStream = new ZipOutputStream(new FileOutputStream(zipFileName));

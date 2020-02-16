@@ -26,7 +26,7 @@ Using mvn-repo:
     <dependency>
         <groupId>com.bytesaim</groupId>
         <artifactId>aimutil</artifactId>
-        <version>1.0</version>
+        <version>1.0.1</version>
     </dependency>
 </dependencies>
 
@@ -45,7 +45,7 @@ Using jitpack.io:
     <dependency>
         <groupId>com.github.bytesaim</groupId>
         <artifactId>aimutil</artifactId>
-        <version>1.0</version>
+        <version>1.0.1</version>
     </dependency>
 </dependencies>
 
@@ -73,7 +73,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-        implementation 'com.github.bytesaim:aimutil:1.0'
+        implementation 'com.github.bytesaim:aimutil:1.0.1'
 }
 ```
 

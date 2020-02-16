@@ -6,7 +6,7 @@
 
     <groupId>com.bytesaim</groupId>
     <artifactId>aimutil</artifactId>
-    <version>1.0</version>
+    <version>1.0.1</version>
 
     <properties>
         <github.global.server>github</github.global.server>
