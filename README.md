@@ -45,7 +45,7 @@ Using jitpack.io:
     <dependency>
         <groupId>com.github.bytesaim</groupId>
         <artifactId>aimutil</artifactId>
-        <version>master-SNAPSHOT</version>
+        <version>1.0</version>
     </dependency>
 </dependencies>
 
@@ -73,7 +73,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-        implementation 'com.github.bytesaim:aimutil:master-SNAPSHOT'
+        implementation 'com.github.bytesaim:aimutil:1.0'
 }
 ```
 
