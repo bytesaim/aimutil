@@ -5,7 +5,7 @@ import java.util.Properties;
 /**
  * @author Adewale Azeez <azeezadewale98@gmail.com>
  */
-public class UserSystem {
+public class AimUserSystem {
 
     public static Properties properties = System.getProperties();
     public static String USER_NAME = properties.getProperty("user.name");

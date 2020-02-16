@@ -8,7 +8,7 @@ import java.security.NoSuchAlgorithmException;
 /**
  * @author Adewale Azeez <azeezadewale98@gmail.com>
  */
-public class Crypto {
+public class AimCrypto {
 
     public static String ConvertToMD5S(String txt) throws NoSuchAlgorithmException {
         byte[] bytesOfMessage = txt.getBytes(StandardCharsets.UTF_8);
