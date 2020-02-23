@@ -21,8 +21,8 @@ public class AimLogger {
      * @param ex
      * @param logFilePath
      */
-    public static void WriteLog(Exception ex, String logFilePath) {
-        ex.printStackTrace();
+    public static void WriteLog(Exception ex, String logFilePath, boolean print) {
+        if (print) { ex.printStackTrace(); }
         try(FileWriter w = new FileWriter(logFilePath, true)) {
             w.write(new Date().toString() + ": ");
             ex.printStackTrace(new PrintWriter(w));
@@ -38,9 +38,9 @@ public class AimLogger {
      * @param message
      * @param logFilePath
      */
-    public static void WriteLog(String message, String logFilePath) {
+    public static void WriteLog(String message, String logFilePath, boolean print) {
         message = new Date().toString() + ": " + message;
-        System.out.println(message);
+        if (print) { System.out.println(message); }
         try(FileWriter w = new FileWriter(logFilePath, true)) {
             w.write(message+"\n");
             w.flush();
@@ -50,11 +50,19 @@ public class AimLogger {
     }
 
     public static void Log(Exception ex) {
-        WriteLog(ex, LogFilePath);
+        WriteLog(ex, LogFilePath, true);
     }
 
     public static void Log(String message) {
-        WriteLog(AimLogger.class.getCanonicalName() + ": " + message, LogFilePath);
+        WriteLog(AimLogger.class.getCanonicalName() + ": " + message, LogFilePath, true);
+    }
+
+    public static void LogNoPrint(Exception ex) {
+        WriteLog(ex, LogFilePath, false);
+    }
+
+    public static void LogNoPrint(String message) {
+        WriteLog(AimLogger.class.getCanonicalName() + ": " + message, LogFilePath, false);
     }
 
 }
