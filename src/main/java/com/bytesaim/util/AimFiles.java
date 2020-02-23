@@ -61,6 +61,7 @@ public class AimFiles {
         return result.toString("UTF-8");
     }
 
+    //https://stackoverflow.com/a/3758880/6626422
     public static String humanReadableByteCountSI(long bytes) {
         String s = bytes < 0 ? "-" : "";
         long b = bytes == Long.MIN_VALUE ? Long.MAX_VALUE : Math.abs(bytes);
@@ -73,6 +74,7 @@ public class AimFiles {
                 : String.format("%s%.1f EB", s, b / 1e6);
     }
 
+    //https://stackoverflow.com/a/3758880/6626422
     public static String humanReadableByteCountBin(long bytes) {
         long b = bytes == Long.MIN_VALUE ? Long.MAX_VALUE : Math.abs(bytes);
         return b < 1024L ? bytes + " B"
